@@ -45,7 +45,7 @@ class Phoneadmin extends Component
     public function saveData()
     {
         $this->validate([
-            'phonenumber' => 'required|numeric|unique:phonenums|digits_between:3,15',
+            'phonenumber' => 'required|numeric|digits_between:3,15',
             'name' => 'required|string',
             'department' => 'required|string',
             'building' => 'required|string',
@@ -81,7 +81,7 @@ class Phoneadmin extends Component
     {
         // Validation for each field
     $validatedData = $this->validate([
-        'ephonenumber' => $this->ephonenumber !== null ? 'numeric|unique:phonenums,phonenumber|digits_between:3,15' : '',
+        'ephonenumber' => $this->ephonenumber !== null ? 'numeric|digits_between:3,15' : '',
         'enamephone' => $this->enamephone !== null ? 'string' : '',
         'edepartment' => $this->edepartment !== null ? 'string' : '',
         'ebuilding' => $this->ebuilding !== null ? 'string' : '',
