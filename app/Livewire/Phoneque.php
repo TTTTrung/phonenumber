@@ -5,10 +5,11 @@ namespace App\Livewire;
 use App\Models\Phonenum;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Phoneque extends Component
 {
-    
+    use WithPagination;
     public string $searchPhone = "";
 
     public function render()
