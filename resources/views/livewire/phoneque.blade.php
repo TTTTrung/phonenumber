@@ -61,7 +61,7 @@
             </tbody>
         </table>
         <div class="py-2 px-2">
-            {{ $phonedatas->links() }}
+            {{ $phonedatas->onEachSide(3)->links() }}
         </div>
     </div>
 </div>
