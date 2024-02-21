@@ -21,7 +21,7 @@ class Phoneque extends Component
                         ->orWhere('phonenumber', 'like', '%' . $this->searchPhone . '%')
                         ->orWhere('department', 'like', '%'. $this->searchPhone . '%');
                 });
-            })->orderby('department','asc')->paginate(10);
+            })->orderby('building','asc')->orderby('department','asc')->paginate(10);
         return view('livewire.phoneque',compact('phonedatas'));
     }
 }
