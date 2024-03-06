@@ -130,10 +130,10 @@ class Phoneadmin extends Component
                         ->orWhere('phonenumber', 'like', '%' . $this->searchPhone . '%')
                         ->orWhere('department', 'like', '%'. $this->searchPhone . '%');
                 });
-            })->orderby('building','asc')->orderby('department','asc')->paginate(10);
+            })->orderby('building','asc')->orderby('department','asc')->orderby('id','asc')->paginate(10);
 
 
-            // $phonedatas = Phonenum::all();
+
         return view('livewire.phoneadmin',compact('phonedatas'));
     }
 }
